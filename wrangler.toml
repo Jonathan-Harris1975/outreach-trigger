@@ -6,4 +6,4 @@ compatibility_date = "2025-11-25"
 crons = ["0 * * * *"]
 
 [vars]
-PODCAST_ENDPOINT = "https://hooks.jonathan-harris.online/x7td31z6y149hn"
+OUTREACH_ENDPOINT = "https://hooks.jonathan-harris.online/ni7jxprq9hdc4r"
