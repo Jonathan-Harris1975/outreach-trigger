@@ -17,14 +17,14 @@ export default {
     const hour = parts.hour;
     const minute = parts.minute;
 
-    if (!(weekday === "Fri" && hour === "16" && minute === "00")) {
+    if (!(weekday === "Mon" && hour === "10" && minute === "00")) {
       return;
     }
 
     const dateStr = `${parts.year}-${parts.month}-${parts.day}`;
 
     try {
-      const res = await fetch(env.PODCAST_ENDPOINT, {
+      const res = await fetch(env.OUTTREACH_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -33,9 +33,9 @@ export default {
         })
       });
 
-      console.log(`Podcast Trigger Response: ${res.status}`);
+      console.log(`outreach Trigger Response: ${res.status}`);
     } catch (err) {
-      console.error("Podcast Trigger Error:", err);
+      console.error(" Outreach Trigger Error:", err);
     }
   }
 };
